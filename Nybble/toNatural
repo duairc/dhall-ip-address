@@ -1,0 +1,4 @@
+\(nybble : ./Nybble) -> merge
+    { X0 = 0, X1 = 1, X2 = 2, X3 = 3, X4 = 4, X5 = 5, X6 = 6, X7 = 7
+    , X8 = 8, X9 = 9, A = 10, B = 11, C = 12, D = 13, E = 14, F = 15
+    } nybble

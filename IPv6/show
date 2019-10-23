@@ -1,0 +1,60 @@
+let Byte = ../Byte/Byte
+let ZState = < Pre | In | Post >
+let doublet = \(a : Byte) -> \(b : Byte) -> \(z : ZState) -> \(start : Bool) -> \(end : Bool) ->
+    let b0 = a.upper
+    let b1 = a.lower
+    let b2 = b.upper
+    let b3 = b.lower
+    let isZero = ../Nybble/equal ../Nybble/0
+    let z0 = isZero b0
+    let z1 = isZero b1
+    let z2 = isZero b2
+    let z3 = isZero b3
+    let boundary = if end then "" else ":"
+    let output =
+        let c0 = if z0 then "" else ../Nybble/show b0        
+        let c1 = if z0 && z1 then "" else ../Nybble/show b1        
+        let c2 = if z0 && z1 && z2 then "" else ../Nybble/show b2        
+        let c3 = ../Nybble/show b3
+        in "${boundary}${c0}${c1}${c2}${c3}"
+    let allZero = z0 && z1 && z2 && z3
+    in if allZero
+        then merge
+            { Pre = {output = if start then "::" else ":", z = ZState.In}
+            , In = {output = "", z = ZState.In}
+            , Post = {output = output, z = ZState.Post}
+            } z
+        else
+            { output = output
+            , z = merge
+                { Pre = ZState.Pre
+                , In = ZState.Post
+                , Post = ZState.Post
+                } z
+            }
+in \(ipv6 : ./IPv6) ->
+    let z0 = ZState.Pre
+    let r0 = doublet ipv6.oe ipv6.of z0 True False
+    let o7 = r0.output
+    let z1 = r0.z
+    let r1 = doublet ipv6.oc ipv6.od z1 False False
+    let o6 = r1.output
+    let z2 = r1.z
+    let r2 = doublet ipv6.oa ipv6.ob z2 False False
+    let o5 = r2.output
+    let z3 = r2.z
+    let r3 = doublet ipv6.o8 ipv6.o9 z3 False False
+    let o4 = r3.output
+    let z4 = r3.z
+    let r4 = doublet ipv6.o6 ipv6.o7 z4 False False
+    let o3 = r4.output
+    let z5 = r4.z
+    let r5 = doublet ipv6.o4 ipv6.o5 z5 False False
+    let o2 = r5.output
+    let z6 = r5.z
+    let r6 = doublet ipv6.o2 ipv6.o3 z6 False False
+    let o1 = r6.output
+    let z7 = r6.z
+    let r7 = doublet ipv6.o0 ipv6.o1 z7 False True
+    let o0 = r7.output
+    in "${o0}${o1}${o2}${o3}${o4}${o5}${o6}${o7}"

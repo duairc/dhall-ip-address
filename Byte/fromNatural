@@ -1,0 +1,8 @@
+\(x : Natural) ->
+    let mdivMod = ../Natural/divMod x 16
+    let just = \(divMod : ../Natural/DivMod) ->
+        { upper = ../Nybble/fromNatural divMod.div
+        , lower = ../Nybble/fromNatural divMod.mod
+        }
+    let nothing = {upper = ../Nybble/0, lower = ../Nybble/0}
+    in Optional/fold ../Natural/DivMod mdivMod ./Byte just nothing

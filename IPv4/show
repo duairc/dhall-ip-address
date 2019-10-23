@@ -1,0 +1,6 @@
+\(ipv4 : ./IPv4) ->
+    let o0 = Natural/show (../Byte/toNatural ipv4.o0)
+    let o1 = Natural/show (../Byte/toNatural ipv4.o1)
+    let o2 = Natural/show (../Byte/toNatural ipv4.o2)
+    let o3 = Natural/show (../Byte/toNatural ipv4.o3)
+    in "${o0}.${o1}.${o2}.${o3}"

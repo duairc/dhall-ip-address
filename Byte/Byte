@@ -1,0 +1,4 @@
+let Nybble = ../Nybble/Nybble in
+{ upper : Nybble
+, lower : Nybble
+}

@@ -1,0 +1,73 @@
+\(o00 : Natural) -> \(o01 : Natural) -> \(o10 : Natural) -> \(o11 : Natural) ->
+\(o20 : Natural) -> \(o21 : Natural) -> \(o30 : Natural) -> \(o31 : Natural) ->
+\(o40 : Natural) -> \(o41 : Natural) -> \(o50 : Natural) -> \(o51 : Natural) ->
+\(o60 : Natural) -> \(o61 : Natural) -> \(o70 : Natural) -> \(o71 : Natural) ->
+\(o80 : Natural) -> \(o81 : Natural) -> \(o90 : Natural) -> \(o91 : Natural) ->
+\(oa0 : Natural) -> \(oa1 : Natural) -> \(ob0 : Natural) -> \(ob1 : Natural) ->
+\(oc0 : Natural) -> \(oc1 : Natural) -> \(od0 : Natural) -> \(od1 : Natural) ->
+\(oe0 : Natural) -> \(oe1 : Natural) -> \(of0 : Natural) -> \(of1 : Natural) ->
+    { o0 =
+        { upper = ../Nybble/fromNatural o00
+        , lower = ../Nybble/fromNatural o01
+        }
+    , o1 =
+        { upper = ../Nybble/fromNatural o10
+        , lower = ../Nybble/fromNatural o11
+        }
+    , o2 =
+        { upper = ../Nybble/fromNatural o20
+        , lower = ../Nybble/fromNatural o21
+        }
+    , o3 =
+        { upper = ../Nybble/fromNatural o30
+        , lower = ../Nybble/fromNatural o31
+        }
+    , o4 =
+        { upper = ../Nybble/fromNatural o40
+        , lower = ../Nybble/fromNatural o41
+        }
+    , o5 =
+        { upper = ../Nybble/fromNatural o50
+        , lower = ../Nybble/fromNatural o51
+        }
+    , o6 =
+        { upper = ../Nybble/fromNatural o60
+        , lower = ../Nybble/fromNatural o61
+        }
+    , o7 =
+        { upper = ../Nybble/fromNatural o70
+        , lower = ../Nybble/fromNatural o71
+        }
+    , o8 =
+        { upper = ../Nybble/fromNatural o80
+        , lower = ../Nybble/fromNatural o81
+        }
+    , o9 =
+        { upper = ../Nybble/fromNatural o90
+        , lower = ../Nybble/fromNatural o91
+        }
+    , oa =
+        { upper = ../Nybble/fromNatural oa0
+        , lower = ../Nybble/fromNatural oa1
+        }
+    , ob =
+        { upper = ../Nybble/fromNatural ob0
+        , lower = ../Nybble/fromNatural ob1
+        }
+    , oc =
+        { upper = ../Nybble/fromNatural oc0
+        , lower = ../Nybble/fromNatural oc1
+        }
+    , od =
+        { upper = ../Nybble/fromNatural od0
+        , lower = ../Nybble/fromNatural od1
+        }
+    , oe =
+        { upper = ../Nybble/fromNatural oe0
+        , lower = ../Nybble/fromNatural oe1
+        }
+    , of =
+        { upper = ../Nybble/fromNatural of0
+        , lower = ../Nybble/fromNatural of1
+        }
+    }

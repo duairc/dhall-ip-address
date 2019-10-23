@@ -1,0 +1,18 @@
+let Byte = ../Byte/Byte in
+{ o0 : Byte
+, o1 : Byte
+, o2 : Byte
+, o3 : Byte
+, o4 : Byte
+, o5 : Byte
+, o6 : Byte
+, o7 : Byte
+, o8 : Byte
+, o9 : Byte
+, oa : Byte
+, ob : Byte
+, oc : Byte
+, od : Byte
+, oe : Byte
+, of : Byte
+}

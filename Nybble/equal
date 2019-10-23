@@ -1,0 +1,6 @@
+\(a : ./Nybble) -> \(b : ./Nybble) ->
+    let n = ./toNatural a
+    let m = ./toNatural b
+    let d = Natural/subtract m n
+    let e = Natural/subtract n m
+    in Natural/isZero d && Natural/isZero e

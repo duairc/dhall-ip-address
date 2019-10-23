@@ -1,0 +1,2 @@
+\(byte : ./Byte) ->
+    ../Nybble/toNatural byte.upper * 16 + ../Nybble/toNatural byte.lower

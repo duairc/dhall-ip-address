@@ -1,0 +1,1 @@
+\(x : Natural) -> Natural/fold x ./Nybble ./succ ./0

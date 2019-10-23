@@ -1,0 +1,6 @@
+\(o0 : Natural) -> \(o1 : Natural) -> \(o2 : Natural) -> \(o3 : Natural) ->
+    { o0 = ../Byte/fromNatural o0
+    , o1 = ../Byte/fromNatural o1
+    , o2 = ../Byte/fromNatural o2
+    , o3 = ../Byte/fromNatural o3
+    }

@@ -1,0 +1,12 @@
+\(x : Natural) -> \(y : Natural) -> if Natural/isZero y
+    then None ./DivMod
+    else
+        let succ = \(z : Natural) -> let z1 = z + 1 in
+            if Natural/isZero (Natural/subtract x (z1 * y))
+                then z1
+                else z
+        let div = Natural/fold x Natural succ 0
+        in Some
+            { div = div
+            , mod = Natural/subtract (div * y) x 
+            }
